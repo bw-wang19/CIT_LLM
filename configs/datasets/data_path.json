@@ -1,0 +1,15 @@
+{
+    "D1":{
+        "local_path": "./xxx",
+        "url": "https://xxx",
+        "eval": true,
+        "domain": "MATH",
+        "task": "QA",
+        "sample_size": 1000,
+        "type": "Instruction Tuning"
+    },
+    "D2":{
+        
+    }
+
+}

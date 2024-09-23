@@ -1,0 +1,16 @@
+{
+    "Train":{
+        "sequence": [
+                "xxx",
+                "xxx"    
+                ],
+        "sequence_length": 10
+    },
+    "Eval":{
+        "sequence": [
+                "xxx",
+                "xxx"    
+                ],
+        "sequence_length": 10
+    }
+}

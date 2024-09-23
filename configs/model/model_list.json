@@ -1,0 +1,43 @@
+{
+    "llama-2-7b": {
+        "local_path": "/workspace/acl/model_zoo/llama/llama-2-7b",
+        "url": "https://huggingface.co/meta-llama/Llama-2-7b",
+        "model_size": 7,
+        "layer_num":31,
+        "Architecture": "Decoder-only",
+        "type":"pretrained",
+        "language":["en"],
+        "help":""
+    },
+    "llama-2-7b-chat": {
+        "local_path": "/workspace/acl/model_zoo/llama/llama-2-7b-chat",
+        "url": "https://huggingface.co/meta-llama/Llama-2-7b-chat",
+        "model_size": 7,
+        "layer_num":31,
+        "Architecture": "Decoder-only",
+        "type":"chat",
+        "language":["en"],
+        "help":"chat model"
+    },
+    "llama-3.1-8B-Instruct":{
+        "local_path": "/workspace/acl/model_zoo/llama/llama-3.1-8B-Instruct",
+        "url": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "model_size": 7,
+        "layer_num":31,
+        "Architecture": "Decoder-only",
+        "type":"Finetuned",
+        "language":["en", "fr", "de", "hi", "it", "pt", "es", "th"],
+        "help":"chat model"
+
+    },
+    "llama-3.1-8B":{
+        "local_path": "/workspace/acl/model_zoo/llama/llama-3.1-8B",
+        "url": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B",
+        "model_size": 7,
+        "layer_num":31,
+        "Architecture": "Decoder-only",
+        "type":"base",
+        "language":["en"],
+        "help":"chat model"
+    }
+}
