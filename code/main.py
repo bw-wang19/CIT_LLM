@@ -232,12 +232,11 @@ def main():
     dataset_loader = ds.Data_Loader(data_args)
     
     # load CL_algs
-    alg = algs.Algs_Init(train_args)
+    alg = algs.init(train_args)
     
     # Train
-    trainer = Trainer(model, dataset_loader, alg)
-    trainer.train(train_args)
-    
+    model = alg.train(train_args)
+
     
     # Test on benchmarks
     
