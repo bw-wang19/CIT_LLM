@@ -5,7 +5,7 @@ import transformers
 import torch
 import LM_Cocktail
 import LM_Cocktail.utils
-from .ft import *
+import utils.peft.finetune as ft
 import model
 import copy
 
@@ -28,15 +28,16 @@ class Alg_LM_Cocktail(Base_Alg):
         self.base_model_type = model_type
     
     def set_up(self, dataset_list:List[str], out_dir:str='./cache_LM_Cocktail', 
-               ft_method=ft_default, ft_args=ft_args, *args, **kwargs):
+               ft_method=ft.ft_llama_factory, ft_args=ft_args, *args, **kwargs):
         new_models_list = []
         for idx, dataset_name in enumerate(dataset_list):
             data_loader = build_loader(dataset_name)
-            new_model = ft_method(self.base_model, data_loader, ft_args)
+            ### TODO
+            # new_model = ft_method(self.base_model, data_loader, ft_args)
             save_path = os.path.join(out_dir, self.base_model_name+dataset_name)
             new_model.save_pretrained(save_path)
             new_models_list.append(save_path)
-        return new_models_list
+            return new_models_list
     
     def train(self, train_loader, val_loader, example_data:List[Dict], 
               models_d_path:List[str]='./cache_LM_Cocktail',

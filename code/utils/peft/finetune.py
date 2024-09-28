@@ -80,3 +80,4 @@ def ft_llama_factory(model_path:str, sys_config, ft_config, ft_yaml_path, merge_
     bash_cmd_merge = cuda_devices_cmd + ' llamafactory-cli export ' + merge_yaml_path
     os.system(bash_cmd_merge)
     
+    
