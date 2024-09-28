@@ -16,7 +16,7 @@ def update_yaml(yaml_path:str, config:Dict) -> None:
         yaml.dump(cfg_yaml, f)
 
 
-def ft_llama_factory(model_path:str, sys_config, ft_config, ft_yaml_path, merge_yaml_path, *args, **kwargs):
+def ft_llama_factory(model_path:str, sys_config, ft_config, ft_yaml_path, merge_yaml_path, *args, **kwargs) -> None:
     '''
     do supervised fine-tuning with LlaMA-Factory API
     github:https://github.com/hiyouga/LLaMA-Factory
@@ -79,3 +79,4 @@ def ft_llama_factory(model_path:str, sys_config, ft_config, ft_yaml_path, merge_
     # merge original model with adapters
     bash_cmd_merge = cuda_devices_cmd + ' llamafactory-cli export ' + merge_yaml_path
     os.system(bash_cmd_merge)
+    
