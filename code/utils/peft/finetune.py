@@ -16,7 +16,11 @@ def update_yaml(yaml_path:str, config:Dict) -> None:
         yaml.dump(cfg_yaml, f)
 
 
-def ft_llama_factory(model_path:str, sys_config, ft_config, ft_yaml_path, merge_yaml_path, *args, **kwargs) -> None:
+
+def ft_llama_factory(model_path:str, sys_config, ft_config, 
+                     ft_yaml_path='/workspace/acl/configs/yaml/llama2_7B_lora_sft.yaml', 
+                     merge_yaml_path='/workspace/acl/configs/yaml/llam2_7B_lora_sft_merge.yaml', 
+                     *args, **kwargs) -> None:
     '''
     do supervised fine-tuning with LlaMA-Factory API
     github:https://github.com/hiyouga/LLaMA-Factory
